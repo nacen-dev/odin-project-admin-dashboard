@@ -102,7 +102,7 @@ html {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  gap: 10px;
+  gap: 16px;
   -ms-grid-rows: (30px)[auto-fit];
       grid-template-rows: repeat(auto-fit, 30px);
 }
@@ -169,7 +169,7 @@ html {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   list-style: none;
-  height: 80%;
+  height: calc(100% - 40px);
 }
 
 .content .projects .project {
