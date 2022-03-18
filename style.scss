@@ -138,6 +138,7 @@ html {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1rem;
       list-style: none;
+      height: 80%;
     }
 
     .project {
@@ -162,7 +163,7 @@ html {
 
   .news {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
     row-gap: 20px;
 
     .announcements {

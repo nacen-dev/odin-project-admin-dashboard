@@ -169,6 +169,7 @@ html {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   list-style: none;
+  height: 80%;
 }
 
 .content .projects .project {
@@ -197,8 +198,8 @@ html {
 .content .news {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
   row-gap: 20px;
 }
 
