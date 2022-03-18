@@ -17,9 +17,17 @@ html {
   display: grid;
   -ms-grid-columns: 225px 3fr;
       grid-template-columns: 225px 3fr;
-  -ms-grid-rows: 150px 1fr;
-      grid-template-rows: 150px 1fr;
+  -ms-grid-rows: 200px 1fr;
+      grid-template-rows: 200px 1fr;
       grid-template-areas: "sidebar header" "sidebar content" "sidebar content" "sidebar content";
+}
+
+.button {
+  padding: 10px 16px;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #15803d;
+  border: none;
 }
 
 .header {
@@ -32,6 +40,7 @@ html {
   display: grid;
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .header .header-top-row {
@@ -41,6 +50,8 @@ html {
       grid-template-columns: 2fr 1fr;
   -webkit-column-gap: 100px;
           column-gap: 100px;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
 }
 
 .header .header-top-row .search-container {
@@ -63,18 +74,75 @@ html {
 }
 
 .header .header-top-row .profile {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: 50px 50px 1fr;
-      grid-template-columns: 50px 50px 1fr;
-  justify-items: center;
+  gap: 20px;
+}
+
+.header .header-top-row .profile .notifications {
+  cursor: pointer;
+  width: 25px;
+}
+
+.header .header-top-row .profile .user-avatar {
+  width: 50px;
 }
 
 .header .header-top-row .profile .username {
   font-weight: 700;
+}
+
+.header .header-bottom-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+
+.header .header-bottom-row .greetings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.header .header-bottom-row .greetings .user-avatar {
+  width: 75px;
+}
+
+.header .header-bottom-row .greetings .greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .header-bottom-row .greetings .greeting .username {
+  font-size: 1.5rem;
+}
+
+.header .header-bottom-row .header-button-controls {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 100px 100px;
+      grid-template-columns: 100px 100px 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 
 .sidebar {
